@@ -8,6 +8,11 @@ outputs:
   cube-url:
     description: "CUBE URL"
     value: "http://localhost:8010/api/v1/"
+    
+ inputs:
+     plugins:
+       description: 'Add extra plugins'   
+       
 runs:
   using: node12
   main: wrapper.js
