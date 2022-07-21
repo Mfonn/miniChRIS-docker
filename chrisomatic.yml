@@ -29,3 +29,5 @@ cube:
       version: 0.2
     - name: pl-simpledsapp
       version: 2.1.0
+    - name: mri10yr06mo01da_normal
+      version: 1.1.4
