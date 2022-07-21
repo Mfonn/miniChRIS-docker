@@ -6,10 +6,12 @@
 
 const { execFileSync } = require('child_process');
 const path = require('path');
+const plugins = require('plugins');
 const isPost = !!process.env['STATE_isPost'];
 
 const script = path.join(__dirname, isPost ? 'unmake.sh' : 'minichris.sh');
-execFileSync(script, { stdio: 'inherit' });
+const newScript = script.concat(plugins);
+execFileSync(newScript, { stdio: 'inherit' });
 
 if (!isPost) {
   console.log('::save-state name=isPost::true');
