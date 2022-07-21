@@ -7,11 +7,10 @@ outputs:
     value: "chris:chris1234"
   cube-url:
     description: "CUBE URL"
-    value: "http://localhost:8010/api/v1/"
-    
+    value: "http://localhost:8010/api/v1/"    
  inputs:
-     plugins:
-       description: 'Add extra plugins'   
+   plugins:
+    description: 'Add extra plugins'   
        
 runs:
   using: node12
