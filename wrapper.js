@@ -6,11 +6,10 @@
 
 const { execFileSync } = require('child_process');
 const path = require('path');
-const plugins = require('plugins');
 const isPost = !!process.env['STATE_isPost'];
 
 const script = path.join(__dirname, isPost ? 'unmake.sh' : 'minichris.sh');
-const newScript = script.concat(plugins);
+const newScript = script.concat('pl-mri10yr06mo01da_normal');
 execFileSync(newScript, { stdio: 'inherit' });
 
 if (!isPost) {
