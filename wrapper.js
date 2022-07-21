@@ -9,8 +9,7 @@ const path = require('path');
 const isPost = !!process.env['STATE_isPost'];
 
 const script = path.join(__dirname, isPost ? 'unmake.sh' : 'minichris.sh');
-const newScript = script.append('pl-mri10yr06mo01da_normal');
-execFileSync(newScript, { stdio: 'inherit' });
+execFileSync(script, { stdio: 'inherit' });
 
 if (!isPost) {
   console.log('::save-state name=isPost::true');
